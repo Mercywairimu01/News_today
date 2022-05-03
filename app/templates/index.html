@@ -1,25 +1,27 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
 
-
-<h1>articles</h1>
- <ul>
-    {% for article in articles%}
+{% block content %}
+<body>
     
-    <h3>{{article.author}}</h3>
-    <p>{{article.title}}</p>
-     <img src="{{article.urlToImage}}" alt="" height="200" width="150" >
-    <p></p>
-     <p>{{article.description}}</p>
-     {% endfor %}
-    </ul>
 
-<h3>news</h3>
+<div class="container">
+<div class="row">
+<h1>Top Headlines</h1>
 <ul>
-    {% for news in news %}
-        <li>{{ news.name}}</li>
-        <li>{{news.description}}</li>
-        <li>{{news.category}}</li>
-        <li>{{news.country}}</li>
-
-        <li>{{news.url}}</li>
-    {% endfor %}
+    {{ macro.displayArticlesList(articles)}}
 </ul>
+</div>
+<div class="row">
+<h1>News Sources</h1>
+<ul>
+    {{ macro.displayNewsList(news)}}
+</ul>
+</div>
+<footer>
+    <div class="footer-copyright text-center py-3">© 2020 Copyright: News Today</div>
+  </footer>
+
+</div>
+</body>
+{% endblock%}
