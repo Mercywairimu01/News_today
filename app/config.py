@@ -5,9 +5,9 @@ class Config:
     '''
     NEWS_API_BASE_URL ='https://newsapi.org/v2/top-headlines/sources?apiKey={}'
 
-    ARTICLES_BASE_URL = 'https://newsapi.org/v2/everything?sources={}&apiKey={}'
+    # ARTICLES_BASE_URL = 'https://newsapi.org/v2/everything?sources={}&apiKey={}'
     
-    GENERAL_URL ='https://newsapi.org/v2/top-headlines?language=en&category={}&apiKey={}'
+    GENERAL_URL ='https://newsapi.org/v2/top-headlines?country=us&apiKey={}'
     
     SECRET_KEY =os.environ.get('SECRET_KEY')
 

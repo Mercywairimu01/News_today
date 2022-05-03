@@ -1,10 +1,16 @@
+
+
 <h1>articles</h1>
-{%for articles in articles%}  
- <li>{{ articles.name}}</li>
-<li>{{articles.description}}</li>
-<li>{{articles.category}}</li>
-<li>{{articles.url}}</li>
-{% endfor%}
+ <ul>
+    {% for article in articles%}
+    
+    <h3>{{article.author}}</h3>
+    <p>{{article.title}}</p>
+     <img src="{{article.urlToImage}}" alt="" height="200" width="150" >
+    <p></p>
+     <p>{{article.description}}</p>
+     {% endfor %}
+    </ul>
 
 <h3>news</h3>
 <ul>
@@ -12,6 +18,8 @@
         <li>{{ news.name}}</li>
         <li>{{news.description}}</li>
         <li>{{news.category}}</li>
+        <li>{{news.country}}</li>
+
         <li>{{news.url}}</li>
     {% endfor %}
 </ul>
