@@ -4,8 +4,21 @@ h1{
     font-weight: bold;
 }
 body{
-   background-image: url('');
+   
+    background-image: url('https://raw.githubusercontent.com/Mercywairimu01/News_today/main/app/static/images/bg.jpg');
 }
 .container{
-    background-color: azure;
+    height: 100%;
+    background-color: rgb(247, 253, 253);
+}
+#source{
+ height: 270px;
+ overflow-y: scroll;
+}
+#headline{
+    height: 550px;
+    overflow-y: scroll;
+}
+.navbar{
+    background-color: rgb(219, 243, 248);
 }
