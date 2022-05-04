@@ -3,13 +3,10 @@ h1{
     color: rgb(102, 146, 227);
     font-weight: bold;
 }
-body{
-   
-    background-image: url('https://raw.githubusercontent.com/Mercywairimu01/News_today/main/app/static/images/bg.jpg');
-}
-.container{
+
+#qq{
     height: 100%;
-    background-color: rgb(247, 253, 253);
+    background-color: rgb(247, 253, 253)!important;
 }
 #source{
  height: 270px;

@@ -7,7 +7,7 @@
       <div class="card-body text-center bg-dark text-white ">  
           <h4 class="card-title "><b>{{ news.name}} </b></h4>
             <p>{{news.description|truncate(100)}}</p>
-            <p><i> Category:{{news.category}} <br>Country:{{news.country}}</i></p>
+            <p><i> Category:{{news.category}} <br>Country:{{news.country}} </i></p>
             <button class="btn bg-success"><a href="{{news.url}}"> More News</a></button>
        
       </div>
@@ -19,13 +19,13 @@
 {% macro displayArticlesList(articles_list) %}
 
     {% for article in articles_list %}
-    <div class="col-lg-4">
+    <div class="col-lg-4" id="news">
    
-     <img src="{{article.urlToImage}}" alt="" height="250" width="350" >
-     <p><b>{{article.title|truncate(100)}}</b></p>
-    <p>{{article.description|truncate(100)}}</p>
-    <button class="btn bg-success"><a href="{{article.url}}"> See Article >></a></button>
-     </div>
+    <img src="{{article.urlToImage}}" alt="" height="250" width="350" >
+    <p><b>{{article.title|truncate(100)}}</b></p>
+    <p>{{article.description|truncate(100)}} <br><br><i>Published At: {{article.publishedAt}}</i> </p>
+    <button class="btn bg-success"><a href="{{article.url}}"> Read Article >></a></button>
+    </div>
     {% endfor %}
 
 {% endmacro %}
